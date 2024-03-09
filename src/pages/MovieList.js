@@ -1,11 +1,26 @@
-import React from 'react'
+import Card from '../components/Card'
+import useFetch from '../hooks/useFetch'
+import { useEffect } from 'react';
 
-const MovieList = () => {
+const MovieList = ({apiPath, title}) => {
+
+	const { data: movies } = useFetch(apiPath);
+
+	useEffect(() => {
+		document.title = `${title} / Movie Max`;
+	});
+
 	return (
 		<main>
-			<div className="text-4xl text-red-600 font-bold">
-				MovieList
-			</div>
+			<section className='max-w-7xl mx-auto py-7'>
+				<div className='flex justify-evenly flex-wrap'>
+					{
+						movies.map((movie) => (
+							<Card key={movie.id} movie={movie}/>
+						))
+					}
+				</div>
+			</section>
 		</main>
 	)
 }
