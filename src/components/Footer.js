@@ -9,7 +9,7 @@ const Footer = () => {
 			</span>
 			<ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
 				<li>
-					<a href="https://www.linkedin.com/in/mahesh-kumar-a-60019411a/" target='_blank' className="hover:underline me-4 md:me-6">LinkedIn</a>
+					<a href="https://www.linkedin.com/in/mahesh-kumar-a-60019411a/" target='_blank' rel="noreferrer" className="hover:underline me-4 md:me-6">LinkedIn</a>
 				</li>
 			</ul>
 			</div>
